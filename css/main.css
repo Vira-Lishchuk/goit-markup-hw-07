@@ -253,4 +253,41 @@ img {
   line-height: 1.36;
   color: #ffff;
 }
+
+.benefits {
+  padding-top: 94px;
+}
+
+.benefits-title {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0;
+}
+
+.list-item {
+  margin-right: 30px;
+  width: 270px;
+}
+
+.benefits-title-list {
+  padding-top: 0;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--title-text-color);
+}
+
+.list-item:last-child {
+  margin-right: 0;
+}
+
+.benefits-content {
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
 /*# sourceMappingURL=main.css.map */
