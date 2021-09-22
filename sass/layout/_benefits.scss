@@ -10,6 +10,9 @@
   margin-right: 30px;
   width: 270px;
 }
+.list-item:last-child {
+  margin-right: 0;
+}
 
 .benefits-title-list {
   padding-top: 0;
@@ -20,10 +23,6 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--title-text-color);
-}
-
-.list-item:last-child {
-  margin-right: 0;
 }
 
 .benefits-content {
