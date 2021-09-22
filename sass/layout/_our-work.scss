@@ -4,14 +4,16 @@
 .work-image {
   display: flex;
 }
+
 .work-item {
   position: relative;
   width: 370px;
   margin-right: 30px;
+  &:last-child {
+    margin-right: 0;
+  }
 }
-.work-image .item:last-child {
-  margin-right: 0;
-}
+
 .work-title {
   position: absolute;
   display: flex;
