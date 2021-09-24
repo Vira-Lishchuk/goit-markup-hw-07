@@ -66,7 +66,7 @@ img {
   padding-right: 15px;
 }
 
-.button {
+.hero__button {
   align-items: center;
   border: 1px solid transparent;
   text-align: center;
@@ -81,7 +81,7 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button:hover, .button:focus {
+.hero__button:hover, .hero__button:focus {
   background-color: #188ce8;
 }
 
@@ -115,15 +115,37 @@ img {
   align-items: center;
 }
 
-.site-nav {
+.header-list {
   display: flex;
 }
 
-.site-nav:hover, .site-nav:focus {
+.header-list:hover, .header-list:focus {
   color: var(--accent-color);
 }
 
-.site-nav-link {
+.header-list__nav-item {
+  position: relative;
+  margin-right: 50px;
+}
+
+.header-list__nav-item:last-child {
+  margin: 0;
+}
+
+.header-list__nav-item:last-child .current::after {
+  content: "";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: -1px;
+  left: 0px;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+.header-list__link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.19;
@@ -135,37 +157,15 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.site-nav-link:hover, .site-nav-link:focus {
+.header-list__link:hover, .header-list__link:focus {
   color: var(--accent-color);
-}
-
-.nav-item {
-  position: relative;
-  margin-right: 50px;
-}
-
-.nav-item:last-child {
-  margin: 0;
-}
-
-.nav-item:last-child .current::after {
-  content: "";
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  bottom: -1px;
-  left: 0px;
-  width: 100%;
-  height: 4px;
-  background-color: var(--accent-color);
-  border-radius: 2px;
 }
 
 .current {
   color: var(--accent-color);
 }
 
-.nav-item .current::after {
+.header-list__nav-item .current::after {
   content: "";
   position: absolute;
   display: flex;
@@ -178,15 +178,7 @@ img {
   border-radius: 2px;
 }
 
-.contact-item {
-  margin-right: 50px;
-}
-
-.contact-item:last-child {
-  margin: 0;
-}
-
-.contact-nav {
+.contact-list {
   margin-left: auto;
   display: flex;
   display: flex;
@@ -194,11 +186,19 @@ img {
   transition: color var(--time-aniamtion) var(--cubic-bezier);
 }
 
-.contact-nav:hover, .contact-nav:focus {
+.contact-list:hover, .contact-list:focus {
   color: var(--accent-color);
 }
 
-.contact-nav-item {
+.contact-list__item {
+  margin-right: 50px;
+}
+
+.contact-list__item:last-child {
+  margin: 0;
+}
+
+.contact-list__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -211,29 +211,29 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-nav-item:hover .contact-icon,
-.contact-nav-item:focus .contact-icon {
+.contact-list__link:hover .contact-list__icon,
+.contact-list__link:focus .contact-list__icon {
   fill: var(--accent-color);
 }
 
-.contact-nav :hover,
-.contact-nav :focus {
+.contact-list :hover,
+.contact-list :focus {
   color: var(--accent-color);
 }
 
-.contact-icon {
+.contact-list__icon {
   vertical-align: middle;
   margin-right: 10px;
   fill: var(--primary-text-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-nav-item:hover .contact-icon,
-.contact-nav-item:focus .contact-icon {
+.contact-list__item:hover .contact-list__icon,
+.contact-list__item:focus .contact-list__icon {
   fill: var(--accent-color);
 }
 
-.site-logo {
+.header-nav__logo {
   margin-right: 93px;
   color: #000000;
   font-family: Raleway;
@@ -242,12 +242,17 @@ img {
   line-height: 1.19;
 }
 
-.logo-blue {
+.header-nav__logo--blue {
   color: var(--accent-color);
-  font-family: Raleway;
-  font-weight: 700;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: bold;
   font-size: 26px;
   line-height: 1.19;
+  color: #ffffff;
 }
 
 .hero {
@@ -263,12 +268,12 @@ img {
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/herobackground.jpg");
 }
 
-.hero-title {
+.hero__title {
   margin-bottom: 30px;
-  font-weight: 900;
   font-size: 44px;
-  text-transform: uppercase;
+  font-weight: 900;
   line-height: 1.36;
+  letter-spacing: 0.06em;
   color: #ffff;
 }
 
@@ -276,18 +281,18 @@ img {
   padding-top: 94px;
 }
 
-.benefits-title {
+.benefits-list {
   display: flex;
   justify-content: space-between;
   padding-left: 0;
 }
 
-.list-item {
+.benefits-list__item {
   margin-right: 30px;
   width: 270px;
 }
 
-.benefits-title-list {
+.benefits-list__title {
   padding-top: 0;
   margin-bottom: 10px;
   font-weight: bold;
@@ -298,11 +303,11 @@ img {
   color: var(--title-text-color);
 }
 
-.list-item:last-child {
+.benefits-list__item:last-child {
   margin-right: 0;
 }
 
-.icon-box {
+.benefits-list__icon-box {
   width: 100%;
   height: 100%;
   display: flex;
@@ -314,14 +319,14 @@ img {
   background-color: var(--primary-bg-color);
 }
 
-.benefits-content {
+.benefits-list__content {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
 
-.our-work {
+.work {
   margin-top: 0;
 }
 
@@ -329,17 +334,17 @@ img {
   display: flex;
 }
 
-.work-item {
+.work-image__item {
   position: relative;
   width: 370px;
   margin-right: 30px;
 }
 
-.work-item:last-child {
+.work-image__item:last-child {
   margin-right: 0;
 }
 
-.work-title {
+.work-image__title {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -350,11 +355,10 @@ img {
   background: rgba(47, 48, 58, 0.8);
 }
 
-.work-text {
-  font-weight: bold;
+.work-image__text {
   font-size: 14px;
-  line-height: 16px;
-  text-align: center;
+  font-weight: 700;
+  line-height: 0.87;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
@@ -537,15 +541,6 @@ img {
 
 .footer-contact {
   margin-right: 70px;
-}
-
-.footer-logo {
-  display: block;
-  margin-bottom: 20px;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 1.19;
-  color: #ffffff;
 }
 
 .footer-socials-box {
@@ -742,8 +737,8 @@ img {
 
 .portfolio-title {
   margin-bottom: 4px;
-  font-weight: bold;
   font-size: 18px;
+  font-weight: 700;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--title-text-color);
@@ -836,7 +831,17 @@ img {
   transition: fill 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close-icon:hover, .modal-close-icon:focus {
+.modal-close-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.data-modal-close:hover .modal-close-icon,
+.data-modal-close:focus .modal-close-icon {
+  fill: var(--accent-color);
+}
+
+.data-modal-close:hover .modal-close-icon,
+.data-modal-close:focus .modal-close-icon {
   fill: var(--accent-color);
 }
 

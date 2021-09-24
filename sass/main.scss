@@ -1,6 +1,7 @@
 @import "./utils/vars";
 @import "./base/reset";
 @import "./utils/hidden";
+@import "./utils/mixins";
 @import "./base/container";
 @import "./components/btn";
 @import "./base/section";
@@ -14,7 +15,6 @@
 @import "./components/socials-team";
 @import "./layout/client";
 @import "./layout/footer";
-@import "./components/logo-footer";
 @import "./components/socials-footer";
 @import "./components/subscribe";
 @import "./layout/portfolio";

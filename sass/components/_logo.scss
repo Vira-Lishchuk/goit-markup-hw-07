@@ -1,4 +1,4 @@
-.site-logo {
+.header-nav__logo {
   margin-right: 93px;
   color: #000000;
   font-family: Raleway;
@@ -7,10 +7,19 @@
   line-height: 1.19;
 }
 
-.logo-blue {
+.header-nav__logo--blue {
   color: var(--accent-color);
-  font-family: Raleway;
-  font-weight: 700;
+  // font-family: Raleway;
+  // font-weight: 700;
+  // font-size: 26px;
+  // line-height: 1.19;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: bold;
   font-size: 26px;
   line-height: 1.19;
+  color: #ffffff;
 }
