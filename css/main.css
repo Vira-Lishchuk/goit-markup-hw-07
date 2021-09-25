@@ -527,7 +527,7 @@ img {
   padding-bottom: 60px;
 }
 
-.address-map {
+.footer__contact-map {
   display: block;
   margin-bottom: 10px;
   font-size: 14px;
@@ -537,7 +537,7 @@ img {
   letter-spacing: 0.03em;
 }
 
-.address-link-mail {
+.footer__contact-mail {
   margin-bottom: 10px;
   font-size: 14px;
   line-height: 1.71;
@@ -547,11 +547,7 @@ img {
   letter-spacing: 0.03em;
 }
 
-.address-link-mail:hover, .address-link-mail:focus {
-  color: var(--accent-color);
-}
-
-.address-link-tel {
+.footer__contact-tel {
   font-size: 14px;
   line-height: 1.71;
   font-style: normal;
@@ -560,16 +556,12 @@ img {
   letter-spacing: 0.03em;
 }
 
-.address-link-tel:hover, .address-link-tel:focus {
-  color: var(--accent-color);
-}
-
 .footer-container {
   display: flex;
   align-items: baseline;
 }
 
-.footer-contact {
+.footer__contact {
   margin-right: 70px;
 }
 
