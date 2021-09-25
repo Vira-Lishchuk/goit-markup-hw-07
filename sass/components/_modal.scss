@@ -28,7 +28,7 @@
   transform: translate(-50%, -50%);
   padding: 40px;
 }
-.data-modal-close {
+.modal__close-btn {
   width: 30px;
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -48,22 +48,21 @@
   justify-content: center;
 
   transition: fill 2500ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-close-icon {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  .data-modal-close:hover &,
-  .data-modal-close:focus & {
+  &:hover .modal-close-icon,
+  &:focus .modal-close-icon {
     fill: var(--accent-color);
   }
 }
 
-.data-modal-close:hover .modal-close-icon,
-.data-modal-close:focus .modal-close-icon {
-  fill: var(--accent-color);
+.modal__close-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .modal__close-btn:hover &,
+  .modal__close-btn:focus & {
+    fill: var(--accent-color);
+  }
 }
 
-.modal-title {
+.modal__close-btn .modal-form__title {
   font-size: 20px;
   text-align: center;
   color: var(--title-text-color);
@@ -71,7 +70,7 @@
   margin-bottom: 20px;
 }
 
-.modal-title {
+.modal-form__title {
   font-size: 20px;
   text-align: center;
   color: var(--title-text-color);
@@ -84,7 +83,7 @@
   cursor: pointer;
 }
 
-.modal-form-label {
+.modal-form-field__label {
   font-size: 12px;
   color: var(--primary-text-color);
   display: block;
@@ -97,7 +96,7 @@
   position: relative;
 }
 
-.modal-form-input {
+.modal-form-field__input {
   width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -111,19 +110,19 @@
   }
 }
 
-.modal-form-icon {
+.modal-form-field__icon {
   position: absolute;
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.modal-form-input:hover + .modal-form-icon,
-.modal-form-input:focus + .modal-form-icon {
+.modal-form-field__input:hover + .modal-form-field__icon,
+.modal-form-field__input:focus + .modal-form-field__icon {
   fill: var(--accent-color);
 }
 
-.modal-comment {
+.modal-form-field__comment {
   width: 100%;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -142,7 +141,7 @@
   }
 }
 
-.check-label {
+.modal-check__label {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -155,7 +154,7 @@
   color: var(--accent-color);
 }
 
-.check-icon {
+.modal-check__icon {
   width: 15px;
   height: 15px;
   border: 2px solid #000000;
@@ -167,12 +166,12 @@
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox:checked + .check-label > .check-icon {
+.modal-check__checkbox:checked + .modal-check__label > .modal-check__icon {
   background: var(--accent-color);
   border: transparent;
 }
 
-.form-btn {
+.modal-form__form-btn {
   font-weight: 400;
   font-size: 16px;
   height: 50px;

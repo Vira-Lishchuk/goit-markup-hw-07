@@ -1,13 +1,16 @@
-.header-nav__logo {
-  margin-right: 93px;
-  color: #000000;
+.site__logo {
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
 }
 
-.header-nav__logo--blue {
+.site__logo--right {
+  color: #000000;
+  margin-right: 93px;
+}
+
+.site__logo--bright {
   color: var(--accent-color);
   // font-family: Raleway;
   // font-weight: 700;
@@ -15,11 +18,8 @@
   // line-height: 1.19;
 }
 
-.footer-logo {
+.site__logo--bottom {
   display: block;
   margin-bottom: 20px;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 1.19;
   color: #ffffff;
 }
